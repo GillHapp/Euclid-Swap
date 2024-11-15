@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 240 28% 97%;
+    /* Soft pastel background */
+    --foreground: 220 30% 20%;
+    /* Slightly dark foreground */
+    --card: 240 20% 95%;
+    /* Subtle contrast for cards */
+    --card-foreground: 220 25% 18%;
+    --popover: 240 25% 94%;
+    /* Muted popovers */
+    --popover-foreground: 220 25% 15%;
+    --primary: 210 75% 60%;
+    /* Vibrant blue for primary elements */
+    --primary-foreground: 240 15% 95%;
+    /* Light text on primary */
+    --secondary: 30 80% 55%;
+    /* Warm orange for secondary elements */
+    --secondary-foreground: 240 20% 96%;
+    --muted: 240 10% 90%;
+    /* Neutral muted elements */
+    --muted-foreground: 220 10% 50%;
+    --accent: 170 65% 55%;
+    /* Fresh green accents */
+    --accent-foreground: 240 30% 15%;
+    --destructive: 0 75% 60%;
+    /* Bold red for destructive actions */
+    --destructive-foreground: 240 20% 96%;
+    --border: 220 10% 85%;
+    /* Subtle borders */
+    --input: 220 10% 85%;
+    --ring: 210 80% 55%;
+    /* Subtle focus ring */
+    --radius: 0.5rem;
+    /* Rounded corners */
+    --chart-1: 200 75% 55%;
+    /* Cool tones for charts */
+    --chart-2: 340 70% 55%;
+    --chart-3: 40 80% 65%;
+    --chart-4: 60 75% 70%;
+    --chart-5: 300 65% 50%;
+  }
+
+  .dark {
+    --background: 240 15% 12%;
+    /* Deep, muted dark background */
+    --foreground: 240 20% 90%;
+    /* Softer light text */
+    --card: 240 15% 15%;
+    /* Slightly elevated contrast for cards */
+    --card-foreground: 240 20% 90%;
+    --popover: 240 15% 17%;
+    /* Muted popovers */
+    --popover-foreground: 240 20% 85%;
+    --primary: 210 65% 65%;
+    /* Vibrant blue primary */
+    --primary-foreground: 240 20% 95%;
+    --secondary: 30 65% 55%;
+    /* Warm orange for contrast */
+    --secondary-foreground: 240 25% 18%;
+    --muted: 240 15% 25%;
+    /* Neutral muted elements */
+    --muted-foreground: 240 10% 70%;
+    --accent: 160 55% 45%;
+    /* Harmonized green accents */
+    --accent-foreground: 240 20% 85%;
+    --destructive: 0 70% 50%;
+    /* Bold red for destructive actions */
+    --destructive-foreground: 240 20% 95%;
+    --border: 240 15% 20%;
+    /* Subtle borders */
+    --input: 240 15% 20%;
+    --ring: 210 70% 55%;
+    /* Focus ring in dark mode */
+    --chart-1: 200 80% 55%;
+    /* Adjusted chart colors */
+    --chart-2: 340 75% 60%;
+    --chart-3: 50 85% 60%;
+    --chart-4: 120 65% 50%;
+    --chart-5: 280 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground dark;
+  }
+}
