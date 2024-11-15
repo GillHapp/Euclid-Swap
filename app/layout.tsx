@@ -5,7 +5,7 @@ import Providers from "./providers";
 import Layout from "@/src/components/layout";
 
 export const metadata: Metadata = {
-  title: "Euclid Nextjs Starter",
+  title: "swap on euclid",
   description: "Euclid Nextjs Starter Template",
 };
 

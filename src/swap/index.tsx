@@ -119,7 +119,7 @@ export default function Swap() {
             });
             console.log("Swap successful:", tx.transactionHash);
         } catch (error) {
-            toast.error(`Swap failed: ${error}`);
+            toast.error(`Swap failed: ${error.message}`);
             console.error("Swap failed:", error);
         }
     }
