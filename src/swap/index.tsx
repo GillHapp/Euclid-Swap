@@ -194,19 +194,14 @@ export default function Swap() {
                             tokenId={fromToken}
                             selectedDenom={selectedFromDenom}
                         />
-
-                        {/* Hidden DenomSelector for functionality */}
-                        <div className="hidden">
-                            <DenomSelector
-                                selectedDenom={selectedFromDenom}
-                                chainUId={chain?.chain_uid ?? ""}
-                                tokenId={fromToken}
-                                setSelectedDenom={(d) => setSelectedFromDenom(d ?? { voucher: {} })}
-                            />
-                        </div>
+                        <DenomSelector
+                            selectedDenom={selectedFromDenom}
+                            chainUId={chain?.chain_uid ?? ""}
+                            tokenId={fromToken}
+                            setSelectedDenom={(d) => setSelectedFromDenom(d ?? { voucher: {} })}
+                        />
                     </div>
                 )}
-
 
                 {/* From Token Button */}
                 <Button
@@ -280,7 +275,7 @@ export default function Swap() {
 
             <div className="h-[1px] bg-slate-800 w-full" />
 
-            {/* <div className="flex flex-row gap-5 items-center">
+            <div className="flex flex-row gap-5 items-center">
                 <p>Select Route</p>
                 {routesLoading ? "Loading Routes" : routes?.paths?.length === 0 ? "No Routes Found" : (
                     <Select value={route.join("/")} onValueChange={(r) => setRoute(r.split('/'))}>
@@ -302,7 +297,7 @@ export default function Swap() {
                         </SelectContent>
                     </Select>
                 )}
-            </div> */}
+            </div>
 
             {chain ? (
                 <PromiseButton disabled={isPending || !fromToken || !toToken || microFromValue === "0" || !route} onClick={handleSwap} className="w-full"> Swap</PromiseButton>
